@@ -42,5 +42,9 @@ def calculate():
     except Exception as e:
         return jsonify({'error': 'Invalid input'}), 400
 
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({'status': 'healthy', 'service': 'calculator-api'})
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
