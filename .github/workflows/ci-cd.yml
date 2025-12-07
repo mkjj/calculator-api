@@ -42,7 +42,7 @@ jobs:
         pytest tests/ -v --tb=short
     
     - name: Upload test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: test-results
@@ -74,7 +74,7 @@ jobs:
         docker run --rm calculator-api:latest python -c "import sys; print('Python:', sys.version)"
         
     - name: Save Docker image as artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: docker-image
         path: |
