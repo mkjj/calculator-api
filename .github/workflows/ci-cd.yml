@@ -32,12 +32,8 @@ jobs:
         source venv/bin/activate
         pip install --upgrade pip
         pip install -r requirements-dev.txt
-    
-    - name: Install package in development mode
-      run: |
-        source venv/bin/activate
         pip install -e .
-    
+
     - name: Run linting
       run: |
         source venv/bin/activate

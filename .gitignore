@@ -5,32 +5,37 @@ __pycache__/
 *.so
 .Python
 venv/
-env/
 .venv/
+env/
 ENV/
 env.bak/
 venv.bak/
 
-# Virtual environments
+# Dependencies
+.pip
+node_modules/
+
+# Testing
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.pytest_cache/
+.tox/
+.mypy_cache/
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.log
+logs/
+*.pid
+*.seed
