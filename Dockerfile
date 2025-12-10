@@ -3,14 +3,11 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Copy dependency files
-COPY requirements.txt requirements-dev.txt ./
+COPY requirements.txt .
 
 # Install ALL dependencies (dev + prod)
 # This is fine since dev tools are small
-RUN pip install --no-cache-dir \
-    -r requirements.txt \
-    -r requirements-dev.txt
-
+RUN pip install --no-cache-dir -r requirements.txt
 # Copy source
 COPY src/ ./src/
 
